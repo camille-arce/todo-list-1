@@ -91,7 +91,9 @@
         <%= a_todo.content %>
         </div>
         <small>
-        Completed at <%= a_todo.updated_at %> 
+        <% time = Time.parse(a_todo.updated_at.to_s) %>
+        <% formatted_time = time.strftime("Completed at %l:%M%P on %d-%b-%Y") %>
+        <%= formatted_time %>
         <a href="/delete_todo/<%= a_todo.id %>">Delete</a>
         </small>
        

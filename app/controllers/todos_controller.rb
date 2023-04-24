@@ -8,6 +8,9 @@ class TodosController < ApplicationController
     @list_of_in_progress = @list_of_todos.where({ :status => "in_progress" }).order({ :created_at => :desc })
     @list_of_done = @list_of_todos.where({ :status => "done" }).order({ :created_at => :desc })
 
+
+
+
     render({ :template => "todos/index.html.erb" })
   end
 
