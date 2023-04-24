@@ -49,7 +49,7 @@
         <%= a_todo.content %>
         </div>
         <small>
-        Added <%= time_ago_in_words(a_todo.created_at) %>
+        Added <%= time_ago_in_words(a_todo.created_at) %> ago
         <a href="/delete_todo/<%= a_todo.id%>">Delete</a>
         </small>
         <form action="/modify_todo/<%= a_todo.id %>" method="post">
@@ -70,7 +70,7 @@
         <%= a_todo.content %>
         </div>
         <small>
-        Started <%= time_ago_in_words(a_todo.updated_at) %>
+        Started <%= time_ago_in_words(a_todo.updated_at) %> ago
         <a href="/delete_todo/<%= a_todo.id %>">Delete</a>
         </small>
         <form action="/modify_todo/<%= a_todo.id %>" method="post">
@@ -91,7 +91,7 @@
         <%= a_todo.content %>
         </div>
         <small>
-        Completed at <%= a_todo.created_at %>
+        Completed at <%= a_todo.updated_at %> 
         <a href="/delete_todo/<%= a_todo.id %>">Delete</a>
         </small>
        
