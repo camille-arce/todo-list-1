@@ -12,10 +12,28 @@
     <%= csp_meta_tag %>
 
     <%= stylesheet_link_tag 'application', media: 'all' %>
+    
+    <style>
 
+    .next_up {
+    color: darkorange;
+    }
+
+    .in_progress {
+    color: darkgreen;
+    }
+
+    .done {
+    color: grey;
+    }
+    </style>
   </head>
 
   <body>
-    <%= yield %>
+  <nav> <a href="/">Your todo list</a> | <a href="/edit_user_profile">Edit profile</a> | <a href="/user_sign_out">Sign out</a>
+
+ <p> <%= notice %> </p>
+  <p> <%= alert %> </p>
+   <%= yield %>
   </body>
 </html>
